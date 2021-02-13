@@ -13,7 +13,7 @@ var wait = 180;
 var horror;
 var hurt;
 var hurtV;
-var energy += -0.3;
+var energy = -0.3;
 
 function preload() {
     playerAnim = loadAnimation("Run (2).png", "Run (3).png", "Run (4).png", "Run (5).png", "Run (6).png", "Run (7).png");
@@ -59,7 +59,7 @@ function draw() {
         horror.loop();
     }
     if (gameState == "play") {
-
+        energy++;
         player.addAnimation("Run", playerAnim);
         //calling the functions
         zHand();
